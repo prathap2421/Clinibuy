@@ -1,4 +1,15 @@
-/* Asap Regular - 400 */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Asap", sans-serif;
+  margin: 0 auto;
+  overflow-x: hidden;
+  background-color: var(--bg-white);
+}
+
 @font-face {
   font-family: "Asap";
   src: url("../../assets/fonts/Asap/Asap-Regular.ttf") format("truetype");
@@ -7,7 +18,7 @@
   font-display: swap;
 }
 
-/* Asap Medium - 500 */
+
 @font-face {
   font-family: "Asap";
   src: url("../../assets/fonts/Asap/Asap-Medium.ttf") format("truetype");
@@ -16,7 +27,7 @@
   font-display: swap;
 }
 
-/* Asap SemiBold - 600 */
+
 @font-face {
   font-family: "Asap";
   src: url("../../assets/fonts/Asap/Asap-SemiBold.ttf") format("truetype");
@@ -25,7 +36,7 @@
   font-display: swap;
 }
 
-/* Asap Bold - 700 */
+
 @font-face {
   font-family: "Asap";
   src: url("../../assets/fonts/Asap/Asap-Bold.ttf") format("truetype");
@@ -33,20 +44,6 @@
   font-style: normal;
   font-display: swap;
 }
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Asap", sans-serif;
-  margin: 0 auto;
-  overflow-x: hidden;
-  background-color: var(--bg-white);
-}
-
 :root {
   --nav-bg: #063f5c;
   --text-white: white;
@@ -81,6 +78,7 @@ body {
   --font-regular: 400;
   --text-30: 30px;
 }
+
 
 a {
   text-decoration: none;
@@ -136,13 +134,13 @@ select {
   cursor: pointer;
 }
 
-// top nav
+
 nav {
   @include flex-center();
   justify-content: space-between;
   background-color: var(--nav-bg);
   color: var(--text-white);
-  padding: 1rem 2rem;
+  padding: 1rem 4rem;
 
 
   ul,
@@ -161,11 +159,11 @@ nav {
   }
 }
 
-// header
+
 header {
   @include flex-center();
   @include padding();
-  // width: i;
+
   justify-content: space-between;
   background-color: var(--bg-white);
   gap: 4rem;
@@ -250,10 +248,10 @@ header {
 }
 
 main {
-  max-width: 100%;
+  // max-width: 100%;
   margin: 0 auto;
   overflow-x: hidden;
-  @include padding();
+  // @include padding();
 
   #hero {
     overflow-x: hidden;
@@ -322,6 +320,7 @@ main {
 
     .cards {
       @include flex-center();
+      justify-content: center;
       flex-wrap: wrap;
       width: 100%;
       gap: 1.5rem;
@@ -2133,6 +2132,46 @@ footer {
 }
 
 
+@media screen and (max-width: 1050px) {
+  main{
+    .client {
+      background-size: auto;
+     
+      .head-body{
+        width: 80%;
+      }
+  
+      .head-title {
+        font-size: 1.5rem; 
+      }
+  
+      .card {
+        width: 70%;
+        @include flex-center-col();
+        
+        .card-overlay{
+          display: none;
+          
+        }
+  
+        .client-card {
+          width: 600px;
+          height:400px ;
+          // background-color: black;
+          .client-head {
+            flex-direction: column;
+            gap: 1rem;
+          }
+
+          .client-txt{
+            width:95%;
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}
 @media screen and (max-width: 950px) {
   main{
     .client {
@@ -2143,7 +2182,7 @@ footer {
       }
   
       .head-title {
-        font-size: 1.5rem; // adjust according to var(--text-45) on mobile
+        font-size: 1.5rem; 
       }
   
       .card {
@@ -2184,7 +2223,7 @@ footer {
         width: 80%;
       }
       .head-title {
-        font-size: 1.2rem; // adjust according to var(--text-45) on mobile
+        font-size: 1.2rem; 
       }
       
   
@@ -2227,7 +2266,7 @@ footer {
         font-size: 10px;
       }
       .head-title {
-        font-size: 1rem; // adjust according to var(--text-45) on mobile
+        font-size: 1rem; 
       }
       
   

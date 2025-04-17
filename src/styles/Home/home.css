@@ -1,35 +1,3 @@
-/* Asap Regular - 400 */
-@font-face {
-  font-family: "Asap";
-  src: url("../../assets/fonts/Asap/Asap-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-/* Asap Medium - 500 */
-@font-face {
-  font-family: "Asap";
-  src: url("../../assets/fonts/Asap/Asap-Medium.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-/* Asap SemiBold - 600 */
-@font-face {
-  font-family: "Asap";
-  src: url("../../assets/fonts/Asap/Asap-SemiBold.ttf") format("truetype");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-/* Asap Bold - 700 */
-@font-face {
-  font-family: "Asap";
-  src: url("../../assets/fonts/Asap/Asap-Bold.ttf") format("truetype");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
 * {
   padding: 0;
   margin: 0;
@@ -43,6 +11,34 @@ body {
   background-color: var(--bg-white);
 }
 
+@font-face {
+  font-family: "Asap";
+  src: url("../../assets/fonts/Asap/Asap-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Asap";
+  src: url("../../assets/fonts/Asap/Asap-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Asap";
+  src: url("../../assets/fonts/Asap/Asap-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Asap";
+  src: url("../../assets/fonts/Asap/Asap-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 :root {
   --nav-bg: #063f5c;
   --text-white: white;
@@ -106,7 +102,7 @@ nav {
   justify-content: space-between;
   background-color: var(--nav-bg);
   color: var(--text-white);
-  padding: 1rem 2rem;
+  padding: 1rem 4rem;
 }
 nav ul,
 nav div {
@@ -199,10 +195,8 @@ header .items a img {
 }
 
 main {
-  max-width: 100%;
   margin: 0 auto;
   overflow-x: hidden;
-  padding: 1.5rem 4rem;
 }
 main #hero {
   overflow-x: hidden;
@@ -266,6 +260,7 @@ main #banner1 {
 main #banner1 .cards {
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   width: 100%;
   gap: 1.5rem;
@@ -1638,6 +1633,38 @@ footer > p {
   }
   footer > p {
     font-size: var(--text-xs);
+  }
+}
+@media screen and (max-width: 1050px) {
+  main .client {
+    background-size: auto;
+  }
+  main .client .head-body {
+    width: 80%;
+  }
+  main .client .head-title {
+    font-size: 1.5rem;
+  }
+  main .client .card {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  main .client .card .card-overlay {
+    display: none;
+  }
+  main .client .card .client-card {
+    width: 600px;
+    height: 400px;
+  }
+  main .client .card .client-card .client-head {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  main .client .card .client-card .client-txt {
+    width: 95%;
+    font-size: 15px;
   }
 }
 @media screen and (max-width: 950px) {
